@@ -27,7 +27,15 @@ public class Fb {
 	{
 		String actualtitle=driver.getTitle();
 		
-		Assert.assertEquals(actualtitle, "Facebook");
+		Assert.assertEquals(actualtitle, "Facebook – log in or sign up");
+	}
+	
+	@Test
+	public void verifyUrl()
+	{
+		String actualurl=driver.getCurrentUrl();
+		
+		Assert.assertEquals(actualurl, "https://www.facebook.com/");
 	}
 	
 	@AfterTest
